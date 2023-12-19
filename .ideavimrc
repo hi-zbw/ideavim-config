@@ -1,0 +1,78 @@
+""" Map leader to space ---------------------
+let mapleader=" "
+
+""" Common settings -------------------------
+syntax enable
+syntax on
+set so=5
+set incsearch
+set hlsearch
+set vb t_vb=
+set showmode
+set number
+set clipboard^=unnamed,unnamedplus
+
+""" Idea specific settings ------------------
+set ideajoin
+set idearefactormode=keep
+
+""" Plugins  --------------------------------
+Plug 'ggandor/leap.nvim'
+
+set multiple-cursors
+set easymotion
+set surround
+set NERDTree
+set commentary
+set highlightedyank
+
+""" Plugin settings -------------------------
+let g:multi_cursor_start_word_key      = '<C-n>'
+let g:multi_cursor_select_all_word_key = '<A-n>'
+let g:multi_cursor_start_key           = 'g<C-n>'
+let g:multi_cursor_select_all_key      = 'g<A-n>'
+let g:multi_cursor_next_key            = '<C-n>'
+let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
+
+set keep-english-in-normal
+set nokeep-english-in-normal-and-restore-in-insert
+
+""" Mappings --------------------------------
+map <C-h> <C-w>h
+map <C-l> <C-w>l
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+
+map < <gv
+map > >gv
+
+map <leader>1 <Action>(GoToTab1)
+map <leader>2 <Action>(GoToTab2)
+map <leader>3 <Action>(GoToTab3)
+map <leader>4 <Action>(GoToTab4)
+map <leader>5 <Action>(GoToTab5)
+map <leader>6 <Action>(GoToTab6)
+map <leader>cl <Action>(CloseAllToTheLeft)
+map <leader>cr <Action>(CloseAllToTheRight)
+
+map <leader>be <Action>(Switcher)
+map <leader>sp <Action>(ReplaceInPath)
+map <leader>rn <Action>(RenameElement)
+map <leader>fr <Action>(FindUsages)
+map <leader>ff <Action>(GotoFile)
+map <leader>fg <Action>(FindInPath)
+map <leader>ft <Action>(ReformatCode)
+map <leader>ca <Action>(ShowIntentionActions)
+map <leader>q <Action>(CloseEditor)
+map <leader>e <Action>(ShowErrorDescription)
+map <leader>[ <Action>(GotoPreviousError)
+map <leader>] <Action>(GotoNextError)
+map <leader>t <Action>(SelectInProjectView)
+map <leader>u <Action>(GotoSuperMethod)
+map K <Action>(QuickJavaDoc)
+map W <Action>(SaveAll)
+
+vmap af <Action>(EditorSelectWord)
+vmap ai <Action>(EditorUnSelectWord)
