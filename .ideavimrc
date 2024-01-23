@@ -1,5 +1,5 @@
 """ Map leader to space ---------------------
-let mapleader=" "
+let mapleader = " "
 
 """ Common settings -------------------------
 syntax enable
@@ -17,24 +17,21 @@ set ideajoin
 set idearefactormode=keep
 
 """ Plugins  --------------------------------
-Plug 'ggandor/leap.nvim'
-
 set multiple-cursors
-set easymotion
 set surround
 set NERDTree
 set commentary
 set highlightedyank
 
 """ Plugin settings -------------------------
-let g:multi_cursor_start_word_key      = '<C-n>'
+let g:multi_cursor_start_word_key = '<C-n>'
 let g:multi_cursor_select_all_word_key = '<A-n>'
-let g:multi_cursor_start_key           = 'g<C-n>'
-let g:multi_cursor_select_all_key      = 'g<A-n>'
-let g:multi_cursor_next_key            = '<C-n>'
-let g:multi_cursor_prev_key            = '<C-p>'
-let g:multi_cursor_skip_key            = '<C-x>'
-let g:multi_cursor_quit_key            = '<Esc>'
+let g:multi_cursor_start_key = 'g<C-n>'
+let g:multi_cursor_select_all_key = 'g<A-n>'
+let g:multi_cursor_next_key = '<C-n>'
+let g:multi_cursor_prev_key = '<C-p>'
+let g:multi_cursor_skip_key = '<C-x>'
+let g:multi_cursor_quit_key = '<Esc>'
 
 set keep-english-in-normal
 set nokeep-english-in-normal-and-restore-in-insert
@@ -76,3 +73,8 @@ map W <Action>(SaveAll)
 
 vmap af <Action>(EditorSelectWord)
 vmap ai <Action>(EditorUnSelectWord)
+
+""" AceJump Plugin -------------------------
+nmap S <Action>(AceBackwardAction)
+nmap s <Action>(AceForwardAction)
+nmap <leader><leader>l <Action>(AceLineAction)
